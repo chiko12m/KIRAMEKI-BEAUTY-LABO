@@ -1,0 +1,1105 @@
+@charset "UTF-8";
+body {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 3.5rem;
+}
+
+@media (min-width: 768px) {
+    main {
+        margin-top: 5.6875rem;
+    }
+}
+
+.pink {
+    color: #fa7da3;
+}
+
+.button {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a {
+    color: #fff;
+}
+
+.button--pink {
+    background-color: #fa7da3;
+}
+
+.button--green {
+    background-color: #49c43d;
+}
+
+@media (min-width: 768px) {
+    .button:hover {
+        opacity: 0.7;
+    }
+}
+
+/* ---------- ヘッダー ---------- */
+.header {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.header__container {
+    display: flex;
+    height: 3.75rem;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: clamp(0.375rem, 3.1vw, 0.75rem);
+    padding-right: clamp(0.375rem, 2.3vw, 0.5625rem);
+}
+
+@media (min-width: 768px) {
+    .header__container {
+        max-width: 66.5rem;
+        height: 5.75rem;
+        margin: auto;
+        padding: 0 1.25rem;
+    }
+}
+
+.header__logo-img {
+    width: clamp(1.25rem, 18.5vw, 4.5rem);
+    height: auto;
+    margin-top: 0.1875rem;
+}
+.header__button-group {
+    display: flex;
+    flex-direction: row;
+    column-gap: clamp(0.375rem, 2.6vw, 0.625rem);
+    margin-bottom: 0.125rem;
+}
+
+.header__button {
+    height: 1.9375rem;
+    border-radius: 0.9688rem;
+    font-size: clamp(0.5rem, 3.1vw, 0.75rem);
+    letter-spacing: 0.0313rem;
+    padding: 0 0.375rem 0 0.6875rem;
+    white-space: nowrap;
+}
+
+.header__button .-small {
+    font-size: clamp(0.5rem, 2.6vw, 0.625rem);
+    white-space: nowrap;
+}
+
+.header__button i {
+    margin-left: 0.1875rem;
+}
+
+@media (min-width: 768px) {
+    .header__logo-img {
+        width: 6.0625rem;
+    }
+
+    .header__button-group {
+        column-gap: 1.3125rem;
+        margin-top: 0;
+    }
+
+    .header__button {
+        height: 3.125rem;
+        border-radius: 1.5625rem;
+        font-size: 1.3125rem;
+        letter-spacing: 0;
+        padding: 0 0.625rem 0 1.6875rem;
+    }
+
+    .header__button .-small {
+        font-size: 1.125rem;
+    }
+}
+
+/* ---------- メインビジュアル ---------- */
+.mv__img {
+    display: inline-block;
+}
+
+.mv__img img {
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+/* ---------- キャンペーン ---------- */
+.cp {
+    background-color: #fffedd;
+    margin-bottom: 1.1875rem;
+}
+
+.cp__container {
+    padding: 1.4375rem 1.25rem 17px;
+}
+
+@media (min-width: 768px) {
+    .cp {
+        margin-bottom: 3.8125rem;
+    }
+    .cp__container {
+        padding: 2.9375rem 1.25rem 1.75rem;
+    }
+}
+
+.cp__special-offer {
+    font-size: 1.3125rem;
+    text-align: center;
+    font-feature-settings: "palt";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.cp__special-offer::before,
+.cp__special-offer::after {
+    content: "";
+    width: 1.6875rem;
+    height: 0.125rem;
+    background-color: #fa7da3;
+}
+
+.cp__special-offer::before {
+    transform: rotate(60deg);
+}
+
+.cp__special-offer::after {
+    transform: rotate(-60deg);
+}
+
+@media (min-width: 768px) {
+    .cp__special-offer {
+        font-size: 2.125rem;
+        font-feature-settings: normal;
+        padding-left: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .cp__special-offer::before,
+    .cp__special-offer::after {
+        width: 2.75rem;
+        height: 0.1875rem;
+    }
+
+    .cp__special-offer::after {
+        margin-left: -0.8125rem;
+    }
+}
+
+.cp__details {
+    background-color: #fff;
+    border: solid 0.0625rem #fa7da3;
+    border-radius: 0.625rem;
+    height: 5.8125rem;
+    overflow: hidden;
+    margin-bottom: 0.625rem;
+}
+
+.cp__course-title {
+    background-color: #fa7da3;
+    width: 100%;
+    font-size: 1.3125rem;
+    color: #fff;
+    text-align: center;
+    padding: 0.1875rem 0 0.4375rem;
+}
+
+.cp__course-offer {
+    font-size: 1.6875rem;
+    text-align: center;
+    padding: 0.4375rem 0 0 0.75rem;
+}
+
+.cp__course-offer .-large {
+    font-size: 2.625rem;
+    font-weight: 600;
+}
+
+.cp__course-description {
+    font-size: 0.625rem;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .cp__details {
+        height: 9.25rem;
+        max-width: 34.375rem;
+        margin: auto;
+        margin-bottom: 1.1875rem;
+    }
+
+    .cp__course-title {
+        font-size: 2rem;
+        padding: 0.1875rem 0 0.6875rem;
+    }
+
+    .cp__course-offer {
+        font-size: 2.75rem;
+        padding: 0.75rem 0 0 1.375rem;
+    }
+
+    .cp__course-offer .-large {
+        font-size: 4.25rem;
+    }
+
+    .cp__course-description {
+        font-size: 0.875rem;
+    }
+}
+
+
+/* ---------- Call To Action ---------- */
+.cta {
+    margin-bottom: 1.875rem;
+}
+
+.cta--2 {
+    margin-bottom: 3rem;
+}
+
+.cta--3 {
+    margin-bottom: 2.625rem;
+}
+
+@media (min-width: 768px) {
+    .cta {
+        margin-bottom: 2.9375rem;
+    }
+
+    .cta--2 {
+        margin-bottom: 3.75rem;
+    }
+
+    .cta--3 {
+        margin-bottom: 4rem;
+    }
+}
+
+.cta__container {
+    padding: 0 1.25rem;
+}
+
+.cta__message {
+    font-size: 1.3125rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.125rem;
+    padding-left: 0.625rem;
+    margin-bottom: 0.8125rem;
+}
+
+@media (min-width: 768px) {
+    .cta__message {
+        font-size: 2.125rem;
+        letter-spacing: 0.2188rem;
+        padding-left: 1rem;
+        margin-bottom: 1.3125rem;
+    }
+
+}
+
+.cta__button {
+    font-size: clamp(1rem, 5.4vw, 1.3125rem);
+    font-weight: 700;
+    height: 5rem;
+    border-radius: 2.5rem;
+    flex-direction: row;
+    column-gap: 1.375rem;
+}
+
+.cta__button p {
+    padding-left: clamp(1.25rem, 18vw, 4.375rem);
+    line-height: 1.3;
+    letter-spacing: 0.1375rem;
+    text-align: center;
+}
+
+.cta__button p .-nowrap {
+    white-space: nowrap;
+}
+
+.cta__button i {
+    padding-right: 1.75rem;
+}
+
+@media (min-width: 768px) {
+    .cta__button {
+        font-size: 2.125rem;
+        max-width: 35.625rem;
+        height: 8.125rem;
+        margin: auto;
+        border-radius: 4.0625rem;
+        column-gap: 2.25rem;
+    }
+
+    .cta__button:hover {
+        background-color: #40e02f;
+        opacity: 1;
+    }
+
+    .cta__button p {
+        padding-left: 7.25rem;
+        letter-spacing: 0.2188rem;
+    }
+
+    .cta__button i {
+        padding-right: 2.6875rem;
+    }
+}
+
+/* ---------- 無料体験内容 ---------- */
+.trial {
+    margin-bottom: 2.1875rem;
+}
+
+.trial__container {
+    padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .trial {
+        margin-bottom: 3.4375rem;
+    }
+
+    .trial__container {
+        max-width: 38.1875rem;
+        margin: auto;
+    }
+}
+
+.trial__title {
+    font-size: 1.0625rem;
+    line-height: 2.3;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    color: #50bfff;
+    border-top: solid 0.0625rem #50bfff;
+    border-bottom: solid 0.0625rem #50bfff;
+    margin-bottom: 0.625rem;
+}
+
+.trial__details {
+    font-size: 0.875rem;
+    line-height: 1.7;
+    padding-left: 0.0625rem;
+}
+
+.trial__details .-small {
+    font-size: 0.6875rem;
+}
+
+@media (min-width: 768px) {
+    .trial__title {
+        font-size: 1.75rem;
+        letter-spacing: 0.1875rem;
+        border-top: solid 0.125rem #50bfff;
+        border-bottom: solid 0.125rem #50bfff;
+        margin-bottom: 0.875rem;
+    }
+
+    .trial__details {
+        font-size: 1.4063rem;
+        padding-left: 0;
+    }
+
+    .trial__details .-small {
+        font-size: 1.125rem;
+    }
+}
+
+/* ---------- 3つのポイント ---------- */
+.point {
+    background-color: #fdf0f5;
+    margin-bottom: 1.875rem;
+}
+
+.point__container {
+    padding: 2.3125rem 1.25rem 1.875rem;
+}
+
+@media (min-width: 768px) {
+    .point {
+        margin-bottom: 3.75rem;
+    }
+
+    .point__container {
+        padding: 3.1875rem 1.25rem 3.75rem;
+    }
+}
+
+.point__title {
+    text-align: center;
+    font-size: 1.125rem;
+    color: #4d2b1b;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 1.625rem;
+}
+
+.point__title .-top {
+    display: block;
+}
+
+.point__title img {
+    width: 12.3125rem;
+    height: auto;
+    margin-right: 0.25rem;
+}
+
+.point__title .-bottom {
+    display: inline-block;
+    width: 18.25rem;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0.75rem 0 0 0.3125rem;
+    letter-spacing: 0.0875rem;
+    position: relative;
+}
+
+.point__title .-bottom::before {
+    content: url(../image/section_title_sparkle_left_sp_01.png);
+    position: absolute;
+    top: 0.5625rem;
+    left: 0;
+}
+
+.point__title .-bottom::after {
+    content: url(../image/section_title_sparkle_right_sp_01.png);
+    position: absolute;
+    top: 0.5625rem;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .point__title {
+        margin-bottom: 3.25rem;
+    }
+
+    .point__title img {
+        width: 16.4375rem;
+    }
+
+    .point__title .-bottom {
+        width: 24.375rem;
+        font-size: 2.625rem;
+        padding: 1.125rem 0 0 0.3125rem;
+        letter-spacing: 0;
+    }
+
+    .point__title .-bottom::before {
+        content: url(../image/section_title_sparkle_left_pc_01.png);
+        top: 0.8125rem;
+    }
+
+    .point__title .-bottom::after {
+        content: url(../image/section_title_sparkle_right_pc_01.png);
+        top: 0.8125rem;
+    }
+}
+
+.point__item {
+    background-color: #fff;
+    border: solid 0.0625rem #fa7da3;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.point__item--1 {
+    margin-bottom: 2rem;
+}
+
+.point__item--2 {
+    margin-bottom: 1.875rem;
+}
+
+.point__item-title {
+    background-color: #fa7da3;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.point__item-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0.9375rem 1.125rem 0.75rem 1.25rem;
+}
+
+.point__item--1 .point__item-description {
+    font-feature-settings: "palt";
+    letter-spacing: 0.0375rem;
+}
+
+.point__item--2 .point__item-description {
+    margin-bottom: 0.8125rem;
+}
+
+.point__item--3 .point__item-description {
+    margin-bottom: 0.3125rem;
+}
+
+@media (min-width: 768px) {
+    .point__item {
+        max-width: 48.75rem;
+        margin: auto;
+    }
+
+    .point__item--1 {
+        margin-bottom: 3.125rem;
+    }
+
+    .point__item--2 {
+        margin-bottom: 3.125rem;
+    }
+
+    .point__item-title {
+        font-size: 1.75rem;
+        line-height: 2.6;
+    }
+
+    .point__item-description {
+        font-size: 1.3125rem;
+        letter-spacing: 0.1px;
+        line-height: 1.6;
+        padding: 1.5625rem 2.375rem 1.4375rem 2.5rem;
+    }
+
+    .point__item--1 .point__item-description {
+        font-feature-settings: normal;
+        letter-spacing: 0.0125rem;
+    }
+
+    .point__item--2 .point__item-description {
+        margin-bottom: 0.25rem;
+    }
+}
+
+.point__comparison {
+    padding: 0 1.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1.375rem;
+    margin-bottom: 1.25rem;
+}
+
+.point__comparison-salon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.point__comparison-salon-logo {
+    width: 8.9375rem;
+    height: 5.3125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.point__comparison-salon-logo--kbl {
+    border: solid 0.0625rem #fa7da3;
+}
+
+.point__comparison-salon-logo--kbl img {
+    width: 4.5625rem;
+    height: auto;
+    margin-left: 4px;
+}
+
+.point__comparison-salon-logo--salon-a {
+    background-color: #fdf0f5;
+    border: solid 0.0625rem #666;
+}
+
+.point__comparison-salon-logo--salon-a p {
+    font-size: 1.125rem;
+    font-feature-settings: "palt";
+    letter-spacing: 0.12rem;
+    color: #433e3f;
+}
+
+.point__comparison-salon-description {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    .point__comparison {
+        column-gap: 2.5625rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .point__comparison-salon-logo {
+        width: 14.5rem;
+        height: 8.5625rem;
+    }
+
+    .point__comparison-salon-logo--kbl {
+        border: solid 0.125rem #fa7da3;
+    }
+
+    .point__comparison-salon-logo--kbl img {
+        width: 7.25rem;
+    }
+
+    .point__comparison-salon-logo--salon-a {
+        border: solid 0.125rem #666;
+    }
+
+    .point__comparison-salon-logo--salon-a p {
+        font-size: 1.8125rem;
+        font-feature-settings: normal;
+        letter-spacing: 0;
+        margin-bottom: 0.375rem;
+    }
+
+    .point__comparison-salon-description {
+        font-size: 1.3125rem;
+        margin-top: 0.9375rem;
+    }
+}
+
+.point__plan-title {
+    font-size: 1.4375rem;
+    font-weight: 600;
+    color: #4d2c1c;
+    text-align: center;
+}
+
+.point__plan--1 .point__plan-title {
+    margin-bottom: 1.8125rem;
+}
+
+.point__plan--2 .point__plan-title {
+    margin-bottom: 2rem;
+}
+
+.point__plan--1 .point__plan-content {
+    padding: 0 1.125rem;
+    margin-bottom: 3rem;
+}
+
+.point__plan--2 .point__plan-content {
+    padding: 0 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
+.point__plan-content-img {
+    display: block;
+    max-width: 400px;
+    margin: auto;
+}
+
+.point__plan-content-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.point__plan-menu {
+    max-width: 25rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    row-gap: 1.3125rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.point__plan-menu-item {
+    width: 31%;
+}
+
+.point__plan-menu-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.375rem;
+}
+
+.point__plan-menu-item p {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fa7da3;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .point__plan-title {
+        font-size: 1.5rem;
+    }
+
+    .point__plan--1 .point__plan-title {
+        margin-bottom: 1.5rem;
+    }
+
+    .point__plan--2 .point__plan-title {
+        margin-bottom: 2rem;
+    }
+
+    .point__plan--1 .point__plan-content {
+        padding: 0 1.125rem;
+        margin-bottom: 3.75rem;
+    }
+
+    .point__plan--2 .point__plan-content {
+        padding: 0 0.75rem;
+        margin-bottom: 1.25rem;
+        margin-bottom: 2.3125rem;
+    }
+
+    .point__plan-content-img {
+        max-width: 36.5rem;
+        padding-left: 1.625rem;
+    }
+
+    .point__plan-menu {
+        max-width: 41.3125rem;
+    }
+
+    .point__plan-menu-item {
+        width: 15%;
+    }
+}
+
+/* ---------- 2つコース ---------- */
+.course {
+    margin-bottom: 1.3125rem;
+}
+
+.course__conitainer {
+    padding: 0 1.25rem;
+}
+
+@media (min-width: 768px) {
+    .course {
+        margin-bottom: 3.875rem;
+    }
+}
+
+.course__title {
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-bottom: 1.9375rem;
+}
+
+.course__title .-top {
+    display: block;
+    padding-left: 0.375rem;
+}
+
+.course__title .-bottom {
+    display: inline-block;
+    width: 16.875rem;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 1.0625rem;
+    position: relative;
+}
+
+.course__title .-bottom::before {
+    content: url(../image/section_title_sparkle_left_sp_01.png);
+    position: absolute;
+    top: 0.625rem;
+    left: 0;
+}
+
+.course__title .-bottom::after {
+    content: url(../image/section_title_sparkle_right_sp_01.png);
+    position: absolute;
+    top: 0.625rem;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .course__title {
+        font-size: 1.5rem;
+        margin-bottom: 2.9375rem;
+    }
+
+    .course__title .-bottom {
+        width: 22.5rem;
+        font-size: 2.625rem;
+        padding-top: 1.5rem;
+    }
+
+    .course__title .-bottom::before {
+        content: url(../image/section_title_sparkle_left_pc_01.png);
+        top: 0.8125rem;
+        left: 0;
+    }
+
+    .course__title .-bottom::after {
+        content: url(../image/section_title_sparkle_right_pc_01.png);
+        top: 0.8125rem;
+        right: 0;
+    }
+}
+
+.course__item-wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.9375rem;
+}
+
+.course__item {
+    border: solid 0.0625rem #fa7da3;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.course__item-title {
+    background-color: #fdf0f5;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 2.5;
+    text-align: center;
+    margin-bottom: 0.875rem;
+}
+
+.course__item-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    padding: 0 16px 0 1.25rem;
+    margin-bottom: 0.875rem;
+}
+
+.course__item-img {
+    width: 100%;
+    padding: 0 1.25rem;
+    margin-bottom: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    .course__item-wrap {
+        flex-direction: row;
+        max-width: 45.625rem;
+        margin: auto;
+        column-gap: 1.9375rem;
+    }
+
+    .course__item {
+        max-width: 21.875rem;
+    }
+
+    .course__item-title {
+        font-size: 1.75rem;
+        line-height: 2.1;
+        margin-bottom: 0.625rem;
+    }
+
+    .course__item-description {
+        font-size: 1.125rem;
+    }
+}
+
+/* ---------- お客様の声 ---------- */
+.voice {
+    background-color: #fdf0f5;
+    margin-bottom: 1.875rem;
+}
+
+.voice__container {
+    padding: 1.6875rem 0 1.5625rem 0;
+}
+
+@media (min-width: 768px) {
+    .voice {
+        margin-bottom: 3.75rem;
+    }
+
+    .voice__container {
+        padding: 2.5rem 0 3.4375rem 0;
+    }
+}
+
+.voice__title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.6875rem;
+}
+
+.voice__title span {
+    display: inline-block;
+    position: relative;
+    width: 16.75rem;
+    padding-top: 0.4375rem;
+}
+
+.voice__title span::before {
+    content: url(../image/section_title_sparkle_left_sp_01.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.voice__title span::after {
+    content: url(../image/section_title_sparkle_right_sp_01.png);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .voice__title {
+        font-size: 2.5rem;
+        margin-bottom: 2.875rem;
+        letter-spacing: 0.125rem;
+    }
+
+    .voice__title span {
+        width: 22.375rem;
+        padding-top: 0.625rem;
+    }
+
+    .voice__title span::before {
+        content: url(../image/section_title_sparkle_left_pc_01.png);
+    }
+
+    .voice__title span::after {
+        content: url(../image/section_title_sparkle_right_pc_01.png);
+    }
+}
+
+.voice__group {
+    padding-left: 0.125rem;
+}
+
+@media (min-width: 768px) {
+    .voice__group {
+        max-width: 60rem;
+        margin: auto;
+    }
+}
+
+.voice__item {
+    width: 19.375rem;
+    height: 11.75rem;
+    margin: 0 0.3125rem 0 0.5625rem;
+    background-color: #fff;
+    border: solid 0.0625rem #fa7da3;
+    border-radius: 0.625rem;
+    overflow: hidden;
+}
+
+.voice__item-course {
+    background-color: #fa7da3;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    line-height: 2.5;
+}
+
+.voice__item-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.voice__item-img {
+    width: 7.5rem;
+    height: 8.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.voice__item-text {
+    width: 11.875rem;
+    padding-right: 1.25rem;
+}
+
+.voice__item-title {
+    line-height: 2;
+}
+
+.voice__item-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Slick */
+.slick-dots li button:before {
+    font-size: 1.125rem;
+    line-height: 1;
+    width: 1.125rem;
+    height: 1.125rem;
+    color: #ffd2d2;
+    opacity: 1;
+}
+
+.slick-dots li button {
+    width: 1.125rem;
+    height: 1.125rem;
+    padding: 0;
+}
+
+.slick-dots li {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin: 0 0.5rem 0 0.25rem;
+}
+
+.slick-dots {
+    bottom: -2.375rem;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #fa7da3;
+}
+
+/* ---------- フッター ---------- */
+.footer {
+    background-color: #fa7da3;
+    height: 4rem;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.footer__logo {
+    width: 4.5625rem;
+    height: auto;
+    padding-top: 0.25rem;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        height: 8rem;
+    }
+
+    .footer__logo {
+        width: 9.0625rem;
+    }
+}
